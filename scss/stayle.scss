@@ -1,0 +1,417 @@
+$yellow:#ff7e47;
+$white: #fff;
+$mainBg:rgba(0, 0, 0, 0.738);
+$dark:#1d1e22;
+$yellowlight:#ffc5b2;
+$border:rgba(255,255,255,0.05);
+$gray:rgba(255,255,255,0.5);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+//mein
+body{
+    background-color: $mainBg;
+}
+
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+    cursor: pointer;
+}
+    .container{
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.btn{
+    padding: 15px 25px;
+    border-radius: 60px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+.btn.btn-white{
+    color: $white;
+    border: 1px solid $white;
+    &:hover{
+        color: $dark;
+        background-color: $white;
+        cursor: pointer;
+        transition:  all 0.5s;
+    }
+}
+.btn.btn-yellow{
+    color: $dark;
+    background-color: $yellow;
+    &:hover{
+        color: $yellow;
+        background-color: $yellowlight;
+        cursor: pointer;
+        transition:  all 0.5s;
+    }
+}
+
+
+.menin__content-right img{
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+
+//Header
+
+header{
+    padding: 20px 0;
+    border: none;
+    border-bottom: 1px solid $gray;
+}
+
+.socials{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.socials ul{
+    display: flex;
+    gap: 20px;
+}
+
+.socials ul{
+    svg{
+        path{
+            fill: $white;
+        }
+    }
+}
+.socials li:hover svg path{
+    fill: $yellow;
+}
+//main
+
+main{
+    padding: 60px 0;
+}
+.mein__content--left{
+    width: 35%;
+}
+.menin__content-right{
+    width: 40%;
+}
+
+.main__content--smalltitle{
+    color: $gray;
+    span{
+        font-size: 40px;
+        font-weight: 900;
+        color: $white;
+    }
+}
+.main__content--title{
+    font-size: 48px;
+    font-weight: 900;
+    color: $yellow;
+}
+.mein__content--body{
+    color: $white;
+    padding: 20px 0;
+    font-weight: bold;
+}
+
+//banner
+
+.banner{
+background-color: $white;
+padding: 20px 0;
+transform: rotate(-2deg);
+margin: 30px 0;
+}
+
+.banner__content ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    font-weight: bold;
+    font: size 20px;
+    overflow-y: scroll;
+    text-transform: uppercase;
+}
+
+.banner__content ul::-webkit-scrollbar{
+    display: none;
+}
+
+.banner__content ul li{
+    position: relative;
+}
+
+.banner__content ul li::after{
+    content:'*';
+    position: absolute;
+    top: 0px;
+    color: $yellow;
+    left: 130%;
+    font-size: 26px;
+    display: flex;
+}
+
+//About
+
+.about__content--left,.about__content--right{
+    width: 45%;
+    color: $white;
+    padding: 50px 0px;
+}
+
+.about__content--body{
+    padding: 20px 0;
+}
+
+.headeing{
+    font-size: 36px;
+    font-weight: 900;
+    color: $white;
+    span{
+        color: $yellow;
+    }
+}
+
+.about__content--lists{
+    display: flex;
+flex-wrap: wrap;
+justify-content: flex-start;
+align-items: center;
+gap: 20px  30px;
+li{
+    padding-left: 40px;
+    position: relative;
+}
+}
+
+.about__content--lists li::after,.about__content--lists li::before{
+    content: '';
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    border-radius: 50%;
+    top: 3px;
+}
+.about__content--lists li::after{
+    left: 10px;
+    background-color: $yellowlight;
+}
+.about__content--lists li:hover::after{
+    background-color: $yellow;
+}
+.about__content--lists li::before{
+    left: 0;
+    background-color: $yellow;
+}
+.about__content--lists li:hover::before{
+    background-color: $yellowlight;
+}
+
+//CV
+
+.cv__content--card{
+border:  1px solid $border;
+padding: 20px;
+border-radius: 20px;
+color: $white;
+width: 48%;
+cursor: pointer;
+}
+
+.cv__content--card:hover{
+    transform: scale(1.05 , 1.05);
+    transition:  all 0.5s;
+}
+
+
+.cv__content--card table{
+width: 100%;
+color: $gray;
+
+}
+
+.cv__content--title{
+    font-size: 34px;
+}
+.cv__content--item{
+padding: 20px 0;
+border-bottom: 1px solid $border;
+}
+.cv__content--item:last-child{
+    border: none;
+}
+
+.cv .wrapper{
+gap: 30px;
+}
+
+//skill
+
+.skill{
+    background-image: url(/img/skill.jpg);
+    padding: 50px 0;
+    background-size: cover;
+    color: $white;
+    position: relative;
+    z-index: 0;
+    margin-top: 70px;
+}
+
+.skill::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background:rgba(0, 0, 0, 0.185);
+    z-index: -1;
+    // backdrop-filter: blur(3px);
+}
+.skill__content--card{
+    width: 31%;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.141);
+    padding: 20px;
+    border-radius:0 20px 20px 0px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.skill__content--card::after{
+    content: '';
+    width: 5%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $yellow;
+}
+
+.skill__content--card:hover::after{
+   width: 100%;
+   transition: 0.5s;
+   z-index: -1;
+}
+
+
+//Portfolia
+
+.portfolia{
+    padding: 50px 0;
+}
+
+.portfolia .wrapper{
+    padding: 30px 0;
+    gap: 30px;
+}
+.porfolia__content--item{
+    width:270px;
+    height: 270px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.porfolia__content--item img{
+    width: 100%;
+    height: auto;
+}
+
+.porfolia__content--item:hover img{
+    transform:translateY(-80%);
+    transition  : all 10s ease;
+}
+
+
+//footer
+
+footer{
+    padding: 50px 0;
+    background-color: $dark;
+}
+
+footer .wrapper{
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+}
+footer h3{
+font-size: 26px;
+color: $white;
+margin-bottom: 20px;
+}
+
+//copyright
+
+.copyright{
+    padding: 20px 0;
+    text-align: center;
+    color: $gray;
+}
+
+//Media queries
+
+@media(max-width:768px){
+    .wrapper{
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .mein__content--left, .main__content--right, .about__content--left, .about__content--right{
+        width: 100%;
+    }
+    .cv .wrapper, .portfolia .wrapper{
+        justify-content: center;
+    }
+    .cv__content--card{
+        width: 70%;
+    }
+    .skill__content--card{
+        width: 48%;
+    }
+    footer .wrapper{
+        width: 80%;
+    }
+    .menin__content-right img{
+        width: 200%;
+        height: 60vh;
+        border-radius: 30px;
+        margin-top: 40px;
+    }
+   
+}
+
+@media (max-width:510px) {
+    .skill__content--card{
+     width: 100%;
+    }
+    .about__content--right img{
+       width: 100%;
+    }
+    .menin__content-right img{
+        width: 247%;
+        height: 60vh;
+        border-radius: 30px;
+        margin-top: 40px;
+    }
+}
